@@ -163,7 +163,9 @@ const app = {
 
         // When random song is on/off
         randomBtn.onclick = function(e) {
-            if (_this.isRepeat) { repeatBtn.click() }
+            if (_this.isRepeat) {
+                repeatBtn.click()
+            }
             _this.isRandom = !_this.isRandom
             _this.setConfig('isRandom', _this.isRandom)
             randomBtn.classList.toggle('active', _this.isRandom)
@@ -171,7 +173,9 @@ const app = {
 
         // When repeat is on/off
         repeatBtn.onclick = function(e) {
-            if (_this.isPlaying) { randomBtn.click() }
+            if (_this.isRandom) {
+                randomBtn.click()
+            }
             _this.isRepeat = !_this.isRepeat
             _this.setConfig('isRepeat', _this.isRepeat)
             repeatBtn.classList.toggle('active', _this.isRepeat)
@@ -218,7 +222,6 @@ const app = {
         audio.src = this.currentSong.path
     },
     loadConfig: function() {
-        console.log(this.config)
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
     },

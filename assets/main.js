@@ -218,7 +218,6 @@ const app = {
         audio.src = this.currentSong.path
     },
     loadConfig: function() {
-        console.log(this.config)
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
     },

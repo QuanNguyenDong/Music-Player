@@ -265,8 +265,8 @@ const app = {
         this.render()
 
         // Display current state of random & repeat btn
-        randomBtn.classList.toggle('active', this.isRandom)
-        repeatBtn.classList.toggle('active', this.isRepeat)
+        // randomBtn.classList.toggle('active', this.isRandom)
+        // repeatBtn.classList.toggle('active', this.isRepeat)
     }
 }
 
